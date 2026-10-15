@@ -1,0 +1,127 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: white;
+    background:
+        radial-gradient(ellipse at top left, #29215c, transparent 50%),
+        #0b1020;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 380px;
+    padding: 24px;
+    border: 1px solid #ffffff18;
+    border-radius: 28px;
+    background: #141a2b;
+    box-shadow: 0 25px 80px #0008;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #a78bfa;
+}
+
+.status {
+    font-size: 10px;
+    color: #6ee7b7;
+    letter-spacing: 1px;
+}
+
+.display {
+    min-height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 14px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+#expression {
+    width: 100%;
+    min-height: 20px;
+    text-align: right;
+    color: #929bb3;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+#result {
+    max-width: 100%;
+    font-size: clamp(34px, 10vw, 48px);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    min-width: 0;
+    height: 62px;
+    border: 1px solid #ffffff08;
+    border-radius: 17px;
+    background: #222a3d;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.15s, background 0.15s;
+}
+
+button:hover {
+    background: #343e56;
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+button.utility {
+    color: #c4b5fd;
+    background: #30294b;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+button.operator {
+    background: #29264b;
+    color: #b8a6ff;
+}
+
+button.equals {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+    color: #626d85;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
